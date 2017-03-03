@@ -135,7 +135,6 @@ namespace BandTracker
             string foundBandName = null;
             string foundBandGenre = null;
             string foundBandSong = null;
-            int foundBandRating = 0;
 
             while(rdr.Read())
             {
