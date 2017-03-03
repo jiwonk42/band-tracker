@@ -22,9 +22,9 @@ _This application allows users to add multiple bands to a venue and multiple ven
     * input: {"Pentatonix", "Pop", "Problem"}
     * output: "Pentatonix" "Pop" "Problem"
 
-### The get all method will return true if the id for the first band has an id of 1.
+### The get all method will return 0 if the band is assigned to an object.
     input: {"Pentatonix", "Pop", "Problem"}
-    output: 1
+    output: 0
 
 ### The get all method will return a list of all bands
     * input: {"Pentatonix", "Pop", "Problem"}, {"Evanescence", "Rock", "Bring Me To Life"}
