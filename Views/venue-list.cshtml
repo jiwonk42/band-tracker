@@ -1,0 +1,11 @@
+<h1>Venues</h1>
+<hr>
+<ul>
+  @foreach (var venue in Model)
+  {
+  <li><a href="/venues/@venue.GetId()">@venue.GetName()</a></li>
+  }
+</ul>
+
+<hr>
+<h4><a href="/">Return Home</a></h4>
