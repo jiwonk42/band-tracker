@@ -102,27 +102,27 @@ namespace BandTracker
         }
 
 
-        // [Fact]
-        // public void Test_GetVenues_ReturnsAllBandVenues()
-        // {
-        //     //Arrange
-        //     Band testBand = new Band("Pentatonix", "Pop", "Problem");
-        //     testBand.Save();
-        //
-        //     Venue testVenue1 = new Venue("Meany Hall");
-        //     testVenue1.Save();
-        //
-        //     Venue testVenue2 = new Venue("Kane Hall");
-        //     testVenue2.Save();
-        //
-        //     //Act
-        //     testBand.AddVenue(testVenue1);
-        //     List<Venue> result = testBand.GetVenues();
-        //     List<Venue> testList = new List<Venue> {testVenue1};
-        //
-        //     //Assert
-        //     Assert.Equal(testList, result);
-        // }
+        [Fact]
+        public void Test_GetVenues_ReturnsAllBandVenues()
+        {
+            //Arrange
+            Band testBand = new Band("Pentatonix", "Pop", "Problem");
+            testBand.Save();
+
+            Venue testVenue1 = new Venue("Meany Hall");
+            testVenue1.Save();
+
+            Venue testVenue2 = new Venue("Kane Hall");
+            testVenue2.Save();
+
+            //Act
+            testBand.AddVenue(testVenue1);
+            List<Venue> result = testBand.GetVenues();
+            List<Venue> testList = new List<Venue> {testVenue1};
+
+            //Assert
+            Assert.Equal(testList, result);
+        }
 
         public void Dispose()
         {

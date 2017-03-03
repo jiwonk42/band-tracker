@@ -30,6 +30,10 @@ _This application allows users to add multiple bands to a venue and multiple ven
     * input: {"Pentatonix", "Pop", "Problem"}, "Meany Hall"
     * output: "Meany Hall"
 
+### The AddVenues and GetVenues will return all venue(s) if added to a Band.
+    * input: {"Meany Hall", "Kane Hall"}
+    * output: "Meany Hall" "Kane Hall"
+
 ### The GetAll method will return a list of all bands
     * input: {"Pentatonix", "Pop", "Problem"}, {"Evanescence", "Rock", "Bring Me To Life"}
     * output: {"Pentatonix", "Pop", "Problem"}, {"Evanescence", "Rock", "Bring Me To Life"}
