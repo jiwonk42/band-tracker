@@ -38,24 +38,24 @@ _This application allows users to add multiple bands to a venue and multiple ven
     * output: 0
 
 ### The equals method will return true if there are two venues that are the same
-    * input: {"Verizon Center"}, {"Verizon Center"}
+    * input: {"Meany Hall"}, {"Meany Hall"}
     * output: true
 
 ### The save method will assign a new id to an new instance of the venue class.
-    * input: {"Verizon Center", 0}
-    * output: {"Verizon Center", non zero}
+    * input: {"Meany Hall", 0}
+    * output: {"Meany Hall", non zero}
 
 ### The find method will return the venue in the database.
-    * input: {"Verizon Center"}
-    * output: "Verizon Center"
+    * input: {"Meany Hall"}
+    * output: "Meany Hall"
 
 ### When the user updates the name of a venue, the update method will return the updated name
-    * input: {"Meany Hall"}, {"Verizon Center"}
-    * output: "Verizon Center"
+    * input: {"Kane Hall"}, {"Meany Hall"}
+    * output: "Meany Hall"
 
 ### When the user deletes a venue, the delete method will return an updated list without the deleted venue
-    * input: {"Verizon Center"}
-    * output: {"Kane Hall", "Meany Hall", "Smith Hall"}
+    * input: {"Meany Hall"}
+    * output: {"Kane Hall", "Savery Hall", "Smith Hall"}
 
 
 ## Setup Instructions

@@ -15,6 +15,21 @@ namespace BandTracker
             _name = Name;
         }
 
+        public override bool Equals(System.Object otherVenue)
+        {
+            if (!(otherVenue is Venue))
+            {
+                return false;
+            }
+            else
+            {
+                Venue newVenue = (Venue) otherVenue;
+                bool idEquality = this.GetId() == newVenue.GetId();
+                bool nameEquality = this.GetName() == newVenue.GetName();
+                return (idEquality && nameEquality);
+            }
+        }
+
         public int GetId()
         {
             return _id;
@@ -61,7 +76,7 @@ namespace BandTracker
           conn.Open();
 
           SqlCommand cmd = new SqlCommand("DELETE FROM venues;", conn);
-          
+
           DB.CloseNonQuery(cmd, conn);
         }
     }
