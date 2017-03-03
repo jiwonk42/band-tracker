@@ -34,9 +34,9 @@ _This application allows users to add multiple bands to a venue and multiple ven
     * input: {"Meany Hall", "Kane Hall"}
     * output: "Meany Hall" "Kane Hall"
 
-### The GetAll method will return a list of all bands
+### The Delete method will return a list of all bands associated with the venue without the deleted band.
     * input: {"Pentatonix", "Pop", "Problem"}, {"Evanescence", "Rock", "Bring Me To Life"}
-    * output: {"Pentatonix", "Pop", "Problem"}, {"Evanescence", "Rock", "Bring Me To Life"}
+    * output: {"Evanescence", "Rock", "Bring Me To Life"}
 
 
 ## Setup Instructions
