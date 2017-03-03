@@ -120,16 +120,6 @@ namespace BandTracker
             DB.CloseQuery(rdr, conn);
         }
 
-        public static void DeleteAll()
-        {
-            SqlConnection conn = DB.Connection();
-            conn.Open();
-
-            SqlCommand cmd = new SqlCommand("DELETE FROM bands;", conn);
-
-            DB.CloseNonQuery(cmd, conn);
-        }
-
         public static Band Find(int id)
         {
             SqlConnection conn = DB.Connection();
@@ -160,6 +150,16 @@ namespace BandTracker
             DB.CloseQuery(rdr, conn);
 
             return foundBand;
+        }
+
+        public static void DeleteAll()
+        {
+            SqlConnection conn = DB.Connection();
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand("DELETE FROM bands;", conn);
+
+            DB.CloseNonQuery(cmd, conn);
         }
     }
 }

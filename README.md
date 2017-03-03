@@ -8,7 +8,7 @@
 
 _This application allows users to add multiple bands to a venue and multiple venues to a band_
 
-## Specifications
+## Specifications: Band.cs
 
 ### The get all method will return 0 list if the list of band is empty in the beginning
     * input: {}
@@ -29,6 +29,9 @@ _This application allows users to add multiple bands to a venue and multiple ven
 ### The get all method will return a list of all bands
     * input: {"Pentatonix", "Pop", "Problem"}, {"Evanescence", "Rock", "Bring Me To Life"}
     * output: {"Pentatonix", "Pop", "Problem"}, {"Evanescence", "Rock", "Bring Me To Life"}
+
+
+## Specifications: Venue.cs
 
 ### The get all method will return an empty list if the list of venues is empty in the beginning
     * input: {}
@@ -53,8 +56,6 @@ _This application allows users to add multiple bands to a venue and multiple ven
 ### When the user deletes a venue, the delete method will return an updated list without the deleted venue
     * input: {"Verizon Center"}
     * output: {"Kane Hall", "Meany Hall", "Smith Hall"}
-
-
 
 
 ## Setup Instructions

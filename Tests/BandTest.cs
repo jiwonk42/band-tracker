@@ -6,9 +6,9 @@ using System.Data.SqlClient;
 
 namespace BandTracker
 {
-    public class BandTrackerTest : IDisposable
+    public class BandTest : IDisposable
     {
-        public BandTrackerTest()
+        public BandTest()
         {
             DBConfiguration.ConnectionString = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=band_tracker_test;Integrated Security=SSPI;";
         }
@@ -84,6 +84,7 @@ namespace BandTracker
         public void Dispose()
         {
             Band.DeleteAll();
+            Venue.DeleteAll();
         }
     }
 }
