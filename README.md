@@ -22,40 +22,17 @@ _This application allows users to add multiple bands to a venue and multiple ven
     * input: {"Pentatonix", "Pop", "Problem"}
     * output: "Pentatonix" "Pop" "Problem"
 
-### The getId method will return 0 if the band is assigned to an object.
-    input: {"Pentatonix", "Pop", "Problem"}
-    output: 0
+### The GetId method will return 0 if the band is assigned to an object.
+    * input: {"Pentatonix", "Pop", "Problem"}
+    * output: 0
+
+### The AddVenues and GetVenues will return venue(s) if added to a Band.
+    * input: {"Pentatonix", "Pop", "Problem"}, "Meany Hall"
+    * output: "Meany Hall"
 
 ### The GetAll method will return a list of all bands
     * input: {"Pentatonix", "Pop", "Problem"}, {"Evanescence", "Rock", "Bring Me To Life"}
     * output: {"Pentatonix", "Pop", "Problem"}, {"Evanescence", "Rock", "Bring Me To Life"}
-
-
-## Specifications: Venue.cs
-
-### The GetAll method will return an empty list if the list of venues is empty in the beginning
-    * input: {}
-    * output: 0
-
-### The Equals method will return true if there are two venues that are the same
-    * input: {"Meany Hall"}, {"Meany Hall"}
-    * output: true
-
-### The GetAll method will return the output as same as the input if the venue was saved in the database
-    * input: "Meany Hall"
-    * output: "Meany Hall"
-
-### The GetId method will return 0 if the venue is assigned to an object.
-    input: "Meany Hall"
-    output: 0
-
-### When the user updates the name of a venue, the update method will return the updated name
-    * input: {"Kane Hall"}, {"Meany Hall"}
-    * output: "Meany Hall"
-
-### When the user deletes a venue, the delete method will return an updated list without the deleted venue
-    * input: {"Meany Hall"}
-    * output: {"Kane Hall", "Savery Hall", "Smith Hall"}
 
 
 ## Setup Instructions

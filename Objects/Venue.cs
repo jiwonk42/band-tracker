@@ -30,6 +30,11 @@ namespace BandTracker
             }
         }
 
+        public override int GetHashCode()
+        {
+            return this.GetName().GetHashCode();
+        }
+
         public int GetId()
         {
             return _id;
