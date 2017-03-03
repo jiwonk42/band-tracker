@@ -83,19 +83,19 @@ namespace BandTracker
                 Band band = Band.Find(parameters.id);
                 return View["band-detail.cshtml", band];
             };
-           //
-        //     Delete["/venues/{id}"] = parameters =>
-        //     {
-        //         Venue targetVenue = Venue.Find(parameters.id);
-        //         targetVenue.Delete();
-        //         return View["venues.cshtml", Venue.GetAll()];
-        //     };
-        //     Delete["/bands/{id}"] = parameters =>
-        //     {
-        //         Band targetBand = Band.Find(parameters.id);
-        //         targetBand.Delete();
-        //         return View["bands.cshtml", Band.GetAll()];
-        //     };
+
+            Delete["/venues/{id}"] = parameters =>
+            {
+                Venue targetVenue = Venue.Find(parameters.id);
+                targetVenue.Delete();
+                return View["venues.cshtml", Venue.GetAll()];
+            };
+            Delete["/bands/{id}"] = parameters =>
+            {
+                Band targetBand = Band.Find(parameters.id);
+                targetBand.Delete();
+                return View["bands.cshtml", Band.GetAll()];
+            };
            //
         //     Post["/band/search/results"] = _ => {
         //        List<Band> FoundList = new List<Band>{};
