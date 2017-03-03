@@ -10,44 +10,44 @@ _This application allows users to add multiple bands to a venue and multiple ven
 
 ## Specifications: Band.cs
 
-### The get all method will return 0 list if the list of band is empty in the beginning
+### The GetAll method will return 0 list if the list of band is empty in the beginning
     * input: {}
     * output: 0
 
-### The equals method will return true if there are two bands that are the same
+### The Equals method will return true if there are two bands that are the same
     * input: {"Pentatonix", "Pop", "Problem"}{"Pentatonix", "Pop", "Problem"}
     * output: true
 
-### The save and get all methods will return the output as same as the input if the band was saved in the database
+### The GetAll method will return the output as same as the input if the band was saved in the database
     * input: {"Pentatonix", "Pop", "Problem"}
     * output: "Pentatonix" "Pop" "Problem"
 
-### The get all method will return 0 if the band is assigned to an object.
+### The getId method will return 0 if the band is assigned to an object.
     input: {"Pentatonix", "Pop", "Problem"}
     output: 0
 
-### The get all method will return a list of all bands
+### The GetAll method will return a list of all bands
     * input: {"Pentatonix", "Pop", "Problem"}, {"Evanescence", "Rock", "Bring Me To Life"}
     * output: {"Pentatonix", "Pop", "Problem"}, {"Evanescence", "Rock", "Bring Me To Life"}
 
 
 ## Specifications: Venue.cs
 
-### The get all method will return an empty list if the list of venues is empty in the beginning
+### The GetAll method will return an empty list if the list of venues is empty in the beginning
     * input: {}
     * output: 0
 
-### The equals method will return true if there are two venues that are the same
+### The Equals method will return true if there are two venues that are the same
     * input: {"Meany Hall"}, {"Meany Hall"}
     * output: true
 
-### The save method will assign a new id to an new instance of the venue class.
-    * input: {"Meany Hall", 0}
-    * output: {"Meany Hall", non zero}
-
-### The find method will return the venue in the database.
-    * input: {"Meany Hall"}
+### The GetAll method will return the output as same as the input if the venue was saved in the database
+    * input: "Meany Hall"
     * output: "Meany Hall"
+
+### The GetId method will return 0 if the venue is assigned to an object.
+    input: "Meany Hall"
+    output: 0
 
 ### When the user updates the name of a venue, the update method will return the updated name
     * input: {"Kane Hall"}, {"Meany Hall"}
