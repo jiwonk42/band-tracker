@@ -19,6 +19,28 @@ namespace BandTracker
             _song = Song;
         }
 
+        public override bool Equals(System.Object otherBand)
+        {
+            if (!(otherBand is Band))
+            {
+                return false;
+            }
+            else
+            {
+                Band newBand = (Band) otherBand;
+                bool idEquality = (this.GetId() == newBand.GetId());
+                bool nameEquality = (this.GetName() == newBand.GetName());
+                bool genreEquality = (this.GetGenre() == newBand.GetGenre());
+                bool songEquality = (this.GetSong() == newBand.GetSong());
+                return (idEquality && nameEquality && genreEquality && songEquality);
+            }
+        }
+
+        public int GetId()
+        {
+            return _id;
+        }
+
         public string GetName()
         {
             return _name;
