@@ -1,8 +1,12 @@
-<h1>Band Detail</h1>
+@{
+  Layout="Shared/_Layout.cshtml";
+}
+
+<h1>Band Information</h1>
 <hr>
-<h1>Name: @Model.GetName()</h1>
-<h1>Genre: @Model.GetGenre()</h1>
-<h1>Song(s): @Model.GetSong()</h1>
+<h4>Name: @Model.GetName()</h4>
+<h4>Genre: @Model.GetGenre()</h4>
+<h4>Song(s): @Model.GetSong()</h4>
 
 <hr>
 <h4><a href="/">Return Home</a></h4>

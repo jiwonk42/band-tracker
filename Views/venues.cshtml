@@ -18,12 +18,11 @@ else
           <input type="hidden" name="_method" value="DELETE">
           <button type="submit" class="btn">Delete</button>
       </form>
-      <button type="button" name="edit-button" class="btn edit-button">Edit</button>
       <form class="appears" action="/venue/edit/@venue.GetId()" method="post">
             <input type="hidden" name="_method" value="PATCH">
-            <label for="new-venue-name">New Name: </label>
+            <label for="new-venue-name">Venue Name: </label>
             <input type="text" name="new-venue-name" value="@venue.GetName()">
-            <button type="submit" class="btn">Update</button>
+            <button type="submit" class="btn">Edit</button>
       </form>
     }
   </ul>

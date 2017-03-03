@@ -16,3 +16,7 @@
 .header h1, h3 {
     text-align: center;
 }
+
+ul li {
+    font-size: 28px;
+}

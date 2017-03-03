@@ -2,19 +2,19 @@
   Layout="Shared/_Layout.cshtml";
 }
 
-<h1>Add a new band</h1>
+<h1>Add A New Band</h1>
+<hr>
 <form action="/bands/new" method="post">
-  <label for="band-name">Band name:</label>
+  <label for="band-name">Name:</label>
   <input id="band-name" name="band-name" type="text">
 
-  <label for="band-genre">Band genres:</label>
+  <label for="band-genre">Genre:</label>
   <input id="band-genre" name="band-genre" type="text">
 
-  <label for="band-song">Band song:</label>
+  <label for="band-song">Song(s):</label>
   <input id="band-song" name="band-song" type="text">
 
-  <button type="submit">Add New</button>
+  <button type="submit" class="btn">Add New</button>
 </form>
-
-<h4><a href="/">Return Home</a></h4>
-<h4><a href="/bands">View All Bands</a></h4>
+<hr>
+<h4><a href="/bands">View All Bands</a> | <a href="/">Return Home</a></h4>
