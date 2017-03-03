@@ -96,23 +96,15 @@ namespace BandTracker
                 targetBand.Delete();
                 return View["bands.cshtml", Band.GetAll()];
             };
-           //
-        //     Post["/band/search/results"] = _ => {
-        //        List<Band> FoundList = new List<Band>{};
-        //        Band foundBand = Band.FindByIngredient(Request.Form["band-search"]);
-        //        FoundList.Add(foundBand);
-        //        return View["search.cshtml", FoundList];
-        //    };
-           //
-        //     Post["/venues/delete"] = _ => {
-        //         Venue.DeleteAll();
-        //         Band.DeleteAll();
-        //         return View["index.cshtml"];
-        //     };
-        //     Post["/bands/delete"] = _ => {
-        //         Band.DeleteAll();
-        //         return View["index.cshtml"];
-        //     };
+
+            Post["/venues/delete"] = _ => {
+                Venue.DeleteAll();
+                return View["index.cshtml"];
+            };
+            Post["/bands/delete"] = _ => {
+                Band.DeleteAll();
+                return View["index.cshtml"];
+            };
         }
     }
 }
