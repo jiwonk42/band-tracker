@@ -10,6 +10,26 @@ _This application allows users to add multiple bands to a venue and multiple ven
 
 ## Specifications
 
+### The get all method will return an empty list if the list of band is empty in the beginning
+    * input: {}
+    * output: ""
+
+### The equals method will return true if there are two bands that are the same
+    * input: {"Pentatonix", "Pop", "Problem"}{"Pentatonix", "Pop", "Problem"}
+    * output: true
+
+### The save and get all methods will return true if the band was saved in the database
+    * input: {"Pentatonix", "Pop", "Problem"}
+    * output: true
+
+### The get all method will return true if the id for the first band has an id of 1.
+    input: {"Pentatonix", "Pop", "Problem"}
+    output: 1
+
+### The get all method will return a list of all bands
+    * input: {"Pentatonix", "Pop", "Problem"}, {"Evanescence", "Rock", "Bring Me To Life"}
+    * output: {"Pentatonix", "Pop", "Problem"}, {"Evanescence", "Rock", "Bring Me To Life"}
+    
 ### The get all method will return an empty list if the list of venues is empty in the beginning
     * input: {}
     * output: 0
@@ -34,25 +54,7 @@ _This application allows users to add multiple bands to a venue and multiple ven
     * input: {"Verizon Center"}
     * output: {"Kane Hall", "Meany Hall", "Smith Hall"}
 
-### The get all method will return an empty list if the list of band is empty in the beginning
-    * input: {}
-    * output: ""
 
-### The equals method will return true if there are two bands that are the same
-    * input: {"Pentatonix", "Pop", "Problem"}{"Pentatonix", "Pop", "Problem"}
-    * output: true
-
-### The save and get all methods will return true if the band was saved in the database
-    * input: {"Pentatonix", "Pop", "Problem"}
-    * output: true
-
-### The get all method will return true if the id for the first band has an id of 1.
-    input: {"Pentatonix", "Pop", "Problem"}
-    output: 1
-
-### The get all method will return a list of all bands
-    * input: {"Pentatonix", "Pop", "Problem"}, {"Evanescence", "Rock", "Bring Me To Life"}
-    * output: {"Pentatonix", "Pop", "Problem"}, {"Evanescence", "Rock", "Bring Me To Life"}
 
 
 ## Setup Instructions
