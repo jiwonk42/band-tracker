@@ -33,7 +33,7 @@ namespace BandTracker
                 return View["bands_form.cshtml", AllVenues];
             };
             Post["/bands/new"] = _ => {
-                Band newBand = new Band(Request.Form["band-name"], Request.Form["band-ingredient"], Request.Form["band-instruction"], Request.Form["band-rating"]);
+                Band newBand = new Band(Request.Form["band-name"], Request.Form["band-genre"], Request.Form["band-song"]);
                 newBand.Save();
                 return View["bands.cshtml", Band.GetAll()];
             };
