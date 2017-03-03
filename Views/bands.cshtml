@@ -7,12 +7,12 @@
 }
 else
 {
-  <h1>Recipes (Sorted by highest rated)</h1>
+  <h1>Bands</h1>
   <hr>
   <ul>
-    @foreach (var recipe in Model)
+    @foreach (var band in Model)
     {
-        <li><a href="/bands/detail/@recipe.GetId()">@recipe.GetName()</a></li>
+        <li><a href="/bands/detail/@band.GetId()">@band.GetName()</a></li>
     }
   </ul>
 }
