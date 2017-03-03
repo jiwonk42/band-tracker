@@ -100,6 +100,49 @@ namespace BandTracker
             Assert.Equal(testList, result);
         }
 
+        [Fact]
+        public void Test_GetBands_ReturnsAllVenueBands()
+        {
+          //Arrange
+          Venue testVenue = new Venue("Meany Hall");
+          testVenue.Save();
+
+          Band testBand1 = new Band("Pentatonix", "Pop", "Problem");
+          testBand1.Save();
+
+          Band testBand2 = new Band("Evanescence", "Rock", "Bring Me To Life");
+          testBand2.Save();
+
+          //Act
+          testVenue.AddBand(testBand1);
+          List<Band> result = testVenue.GetBands();
+          List<Band> testList = new List<Band> {testBand1};
+
+          //Assert
+          Assert.Equal(testList, result);
+        }
+
+        [Fact]
+        public void Test_Delete_DeletesVenueAssociationsFromDatabase()
+        {
+          //Arrange
+          Band testBand = new Band("Pentatonix", "Pop", "Problem");
+          testBand.Save();
+
+          Venue testVenue = new Venue("Meany Hall");
+          testVenue.Save();
+
+          //Act
+          testVenue.AddBand(testBand);
+          testVenue.Delete();
+
+          List<Venue> resultBandsVenues = testBand.GetVenues();
+          List<Venue> testBandsVenues = new List<Venue> {};
+
+          //Assert
+          Assert.Equal(testBandsVenues, resultBandsVenues);
+        }
+
         public void Dispose()
         {
             Band.DeleteAll();

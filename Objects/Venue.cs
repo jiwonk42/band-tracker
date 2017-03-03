@@ -166,6 +166,38 @@ namespace BandTracker
           return bands;
         }
 
+        public void UpdateVenues(string newName)
+        {
+            SqlConnection conn = DB.Connection();
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand("UPDATE venues SET name = @NewName OUTPUT INSERTED.* WHERE id = @VenueId;", conn);
+
+            cmd.Parameters.Add(new SqlParameter("@NewName", newName));
+            cmd.Parameters.Add(new SqlParameter("@VenueId", this.GetId()));
+
+            SqlDataReader rdr = cmd.ExecuteReader();
+
+            while(rdr.Read())
+            {
+                this._name = rdr.GetString(1);
+            }
+
+            DB.CloseQuery(rdr, conn);
+        }
+
+        public void Delete()
+        {
+          SqlConnection conn = DB.Connection();
+          conn.Open();
+
+          SqlCommand cmd = new SqlCommand("DELETE FROM venues WHERE id = @VenueId; DELETE FROM venues_bands WHERE venue_id = @VenueId;", conn);
+
+          cmd.Parameters.Add(new SqlParameter("@VenueId", this.GetId()));
+
+          DB.CloseNonQuery(cmd, conn);
+        }
+
         public static void DeleteAll()
         {
           SqlConnection conn = DB.Connection();
