@@ -18,9 +18,9 @@ _This application allows users to add multiple bands to a venue and multiple ven
     * input: {"Pentatonix", "Pop", "Problem"}{"Pentatonix", "Pop", "Problem"}
     * output: true
 
-### The save and get all methods will return true if the band was saved in the database
+### The save and get all methods will return the output as same as the input if the band was saved in the database
     * input: {"Pentatonix", "Pop", "Problem"}
-    * output: true
+    * output: "Pentatonix" "Pop" "Problem"
 
 ### The get all method will return true if the id for the first band has an id of 1.
     input: {"Pentatonix", "Pop", "Problem"}

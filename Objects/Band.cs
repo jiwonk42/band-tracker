@@ -36,6 +36,11 @@ namespace BandTracker
             }
         }
 
+        public override int GetHashCode()
+        {
+            return this.GetName().GetHashCode();
+        }
+
         public int GetId()
         {
             return _id;
@@ -76,7 +81,6 @@ namespace BandTracker
             conn.Open();
 
             SqlCommand cmd = new SqlCommand("SELECT * FROM bands;", conn);
-
             SqlDataReader rdr = cmd.ExecuteReader();
 
             while(rdr.Read())
@@ -84,13 +88,36 @@ namespace BandTracker
                 int bandId = rdr.GetInt32(0);
                 string bandName = rdr.GetString(1);
                 string bandGenre = rdr.GetString(2);
-                string bandSong = rdr.GetString(3);
+                string bandSong = rdr.GetString(3);;
                 Band newBand = new Band(bandName, bandGenre, bandSong, bandId);
+                AllBands.Add(newBand);
             }
 
             DB.CloseQuery(rdr, conn);
 
             return AllBands;
+        }
+
+
+        public void Save()
+        {
+            SqlConnection conn = DB.Connection();
+            conn.Open();
+
+            SqlCommand cmd = new SqlCommand("INSERT INTO bands (name, genre, song) OUTPUT INSERTED.id VALUES (@BandName, @BandGenre, @BandSong);", conn);
+
+            cmd.Parameters.Add(new SqlParameter("@BandName", this.GetName()));
+            cmd.Parameters.Add(new SqlParameter("@BandGenre", this.GetGenre()));
+            cmd.Parameters.Add(new SqlParameter("@BandSong", this.GetSong()));
+
+            SqlDataReader rdr = cmd.ExecuteReader();
+
+            while(rdr.Read())
+            {
+                this._id = rdr.GetInt32(0);
+            }
+
+            DB.CloseQuery(rdr, conn);
         }
 
         public static void DeleteAll()
